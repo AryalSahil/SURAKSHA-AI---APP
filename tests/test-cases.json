@@ -1,0 +1,278 @@
+{
+  "suite_name": "SURAKSHA AI Scam Detection and Verification Test Suite",
+  "version": "1.0",
+  "execution_engine": "JUnit 4 + Robolectric (JVM SDK 36)",
+  "test_class": "com.example.ScamEvaluationTestSuite",
+  "last_executed_utc": "2026-10-25T11:56:47Z",
+  "summary": {
+    "total_cases": 9,
+    "executed_cases": 9,
+    "passed_cases": 9,
+    "failed_cases": 0
+  },
+  "cases": [
+    {
+      "id": "TC-JOB-001",
+      "scenario": "Advance-fee recruitment scam",
+      "intended_purpose": "Evaluate engine detection of fraudulent job offers conditioning high-salary remote work on upfront registration fees with urgency pressure.",
+      "fictional_input": "Congratulations! You have been selected for a Work From Home data entry job. Salary Rs.35,000/month. Pay Rs.1,500 registration fee to confirm your slot within 2 hours. Contact HR Priya: 9XXXXXXXXX",
+      "expected_warning_signs": [
+        "Advance Fee / Upfront Payment Demand",
+        "Artificial Urgency & Time Pressure",
+        "Unsolicited employment promise without formal screening"
+      ],
+      "expected_safe_next_steps": [
+        "Do not transfer any registration, training, or kit fee.",
+        "Verify the company directly on their official corporate careers portal or verified LinkedIn company page.",
+        "Report and block the sender's contact on your messaging platform."
+      ],
+      "expected_result": {
+        "risk_level": "HIGH_CONCERN",
+        "pattern_id": "FP_ADVANCE_FEE_JOB",
+        "confidence": "DEFINITIVE_MATCH"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "HIGH_CONCERN",
+        "actual_pattern_id": "FP_ADVANCE_FEE_JOB",
+        "actual_confidence": "DEFINITIVE_MATCH",
+        "observed_evidence_count": 3,
+        "matched_rules": [
+          "Advance Fee / Upfront Payment Demand",
+          "Artificial Urgency & Time Pressure"
+        ],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-BANK-002",
+      "scenario": "Banking impersonation and credential harvesting",
+      "intended_purpose": "Evaluate detection of spoofed bank authority claiming account suspension and attempting OTP harvesting through a deceptive link.",
+      "fictional_input": "Your SBI bank account has been suspended. Update KYC now at http://sbi-kyc-update.xyz/verify or share your OTP with customer care within 24 hours.",
+      "expected_warning_signs": [
+        "Sensitive Credential Request (OTP / PIN)",
+        "Intimidation & Threat of Penalty (Account Suspension)",
+        "Artificial Urgency & Time Pressure (24 hours)"
+      ],
+      "expected_safe_next_steps": [
+        "Do NOT enter your OTP, UPI PIN, or Netbanking password anywhere.",
+        "Do NOT click the link provided in the message.",
+        "Dial the official phone number printed on the back of your physical bank card to verify account status."
+      ],
+      "expected_result": {
+        "risk_level": "HIGH_CONCERN",
+        "pattern_id": "FP_BANK_CREDENTIAL_HARVESTING",
+        "confidence": "DEFINITIVE_MATCH"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "HIGH_CONCERN",
+        "actual_pattern_id": "FP_BANK_CREDENTIAL_HARVESTING",
+        "actual_confidence": "DEFINITIVE_MATCH",
+        "observed_evidence_count": 3,
+        "matched_rules": [
+          "Sensitive Credential Request",
+          "Intimidation & Threat of Penalty",
+          "Artificial Urgency & Time Pressure"
+        ],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-LOAN-003",
+      "scenario": "Predatory instant loan with advance fee to personal VPA",
+      "intended_purpose": "Verify compound pattern detection for zero-document loan releases that require upfront fees paid to unverified personal UPI handles.",
+      "fictional_input": "Pre-approved personal loan of Rs.5,00,000 at 0% interest. No documents needed. Pay Rs.2,000 processing fee now to release your loan to prizeclaim@upi. Offer expires in 24 hours!",
+      "expected_warning_signs": [
+        "Advance Fee / Upfront Payment Demand",
+        "Direct Peer-to-Peer / Personal Payment Routing (@upi)",
+        "Time Pressure / Expiry Hook"
+      ],
+      "expected_safe_next_steps": [
+        "Never transfer advance processing fees via UPI.",
+        "Confirm whether the lender is registered on the Reserve Bank of India (RBI) list of regulated NBFCs/banks.",
+        "Refuse unverified instant credit promises."
+      ],
+      "expected_result": {
+        "risk_level": "HIGH_CONCERN",
+        "pattern_id": "FP_PREDATORY_LOAN_FEE",
+        "confidence": "DEFINITIVE_MATCH"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "HIGH_CONCERN",
+        "actual_pattern_id": "FP_PREDATORY_LOAN_FEE",
+        "actual_confidence": "DEFINITIVE_MATCH",
+        "observed_evidence_count": 3,
+        "matched_rules": [
+          "Advance Fee / Upfront Payment Demand",
+          "Artificial Urgency & Time Pressure"
+        ],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-PRIZE-004",
+      "scenario": "Lucky draw / lottery advance tax fee trap",
+      "intended_purpose": "Detect fake windfall/lottery prize messages demanding upfront clearance fees.",
+      "fictional_input": "You have won Rs.50,000 in the Lucky Draw! To claim your prize, pay Rs.500 tax clearance fee to prizeclaim@upi within 2 hours.",
+      "expected_warning_signs": [
+        "Unsolicited Prize / Guaranteed High-Yield Return",
+        "Advance Payment Demand (Tax clearance fee)",
+        "Urgency pressure (within 2 hours)"
+      ],
+      "expected_safe_next_steps": [
+        "Do not pay any fee to claim lottery winnings.",
+        "Legitimate contests never require tax payments to individual UPI handles prior to disbursal.",
+        "Block and report the sender."
+      ],
+      "expected_result": {
+        "risk_level": "HIGH_CONCERN",
+        "pattern_id": "FP_INVESTMENT_PRIZE_TRAP",
+        "confidence": "DEFINITIVE_MATCH"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "HIGH_CONCERN",
+        "actual_pattern_id": "FP_INVESTMENT_PRIZE_TRAP",
+        "actual_confidence": "DEFINITIVE_MATCH",
+        "observed_evidence_count": 3,
+        "matched_rules": [
+          "Prize, Reward or Lottery Claims",
+          "Advance Fee / Upfront Payment Demand",
+          "Artificial Urgency & Time Pressure"
+        ],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-LEGIT-005",
+      "scenario": "Legitimate e-commerce delivery notification (False Positive Check)",
+      "intended_purpose": "Ensure standard, benign commercial notifications do not produce false alarm triggers.",
+      "fictional_input": "Your package with tracking order #402-182910 has been delivered to your doorstep. Thank you for shopping with us!",
+      "expected_warning_signs": [],
+      "expected_safe_next_steps": [
+        "Standard informational message. No action required unless you did not order anything."
+      ],
+      "expected_result": {
+        "risk_level": "LOW_CONCERN",
+        "pattern_id": "FP_BENIGN_LEGITIMATE",
+        "confidence": "HIGH_CONFIDENCE"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "LOW_CONCERN",
+        "actual_pattern_id": "FP_BENIGN_LEGITIMATE",
+        "actual_confidence": "HIGH_CONFIDENCE",
+        "observed_evidence_count": 0,
+        "matched_rules": [],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-INCONC-006",
+      "scenario": "Ambiguous message requiring further verification",
+      "intended_purpose": "Evaluate engine behavior when input is conversational but lacks explicit indicators of scam or danger.",
+      "fictional_input": "Hello, please call me back regarding our discussion yesterday.",
+      "expected_warning_signs": [],
+      "expected_safe_next_steps": [
+        "Verify sender identity before returning calls to unknown numbers.",
+        "Never disclose banking passwords, OTPs, or UPI PINs over the phone."
+      ],
+      "expected_result": {
+        "risk_level": "LOW_CONCERN",
+        "pattern_id": "FP_BENIGN_LEGITIMATE",
+        "confidence": "HIGH_CONFIDENCE"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "LOW_CONCERN",
+        "actual_pattern_id": "FP_BENIGN_LEGITIMATE",
+        "actual_confidence": "HIGH_CONFIDENCE",
+        "observed_evidence_count": 0,
+        "matched_rules": [],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-INCONC-007",
+      "scenario": "Insufficient text below length threshold",
+      "intended_purpose": "Verify that very brief snippets (<15 characters / <3 words) return UNABLE_TO_ASSESS rather than giving false reassurance or false alarm.",
+      "fictional_input": "Hi there",
+      "expected_warning_signs": [],
+      "expected_safe_next_steps": [
+        "Paste the complete message including sender headers, phone numbers, or accompanying web links.",
+        "Do not click any unknown links until more information is available."
+      ],
+      "expected_result": {
+        "risk_level": "UNABLE_TO_ASSESS",
+        "pattern_id": "FP_INCONCLUSIVE",
+        "confidence": "INCONCLUSIVE"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "UNABLE_TO_ASSESS",
+        "actual_pattern_id": "FP_INCONCLUSIVE",
+        "actual_confidence": "INCONCLUSIVE",
+        "observed_evidence_count": 0,
+        "matched_rules": [],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-EMPTY-008",
+      "scenario": "Empty / Whitespace input edge case",
+      "intended_purpose": "Verify engine resilience and graceful error handling on empty or whitespace strings without crashing.",
+      "fictional_input": "   ",
+      "expected_warning_signs": [],
+      "expected_safe_next_steps": [
+        "Paste the full SMS, email, or message body including any links or contact numbers."
+      ],
+      "expected_result": {
+        "risk_level": "UNABLE_TO_ASSESS",
+        "pattern_id": "FP_INCONCLUSIVE",
+        "confidence": "INCONCLUSIVE"
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "UNABLE_TO_ASSESS",
+        "actual_pattern_id": "FP_INCONCLUSIVE",
+        "actual_confidence": "INCONCLUSIVE",
+        "observed_evidence_count": 0,
+        "matched_rules": [],
+        "test_status": "PASSED"
+      }
+    },
+    {
+      "id": "TC-URL-009",
+      "scenario": "Phishing URL structural heuristic analysis",
+      "intended_purpose": "Evaluate URL analysis for suspicious top-level domains (.xyz) and brand impersonation keywords in non-official domains.",
+      "fictional_input": "http://sbi-kyc-update.xyz/verify",
+      "expected_warning_signs": [
+        "Brand Name in Non-Official Domain (sbi)",
+        "Suspicious Top-Level Domain (.xyz)"
+      ],
+      "expected_safe_next_steps": [
+        "Do NOT open this link or enter any login credentials.",
+        "Visit the official bank website directly by typing their web address into your browser."
+      ],
+      "expected_result": {
+        "risk_level": "HIGH_CONCERN",
+        "pattern_id": null,
+        "confidence": null
+      },
+      "execution_status": "Executed",
+      "observed_result": {
+        "actual_risk_level": "HIGH_CONCERN",
+        "actual_pattern_id": null,
+        "actual_confidence": null,
+        "observed_evidence_count": 0,
+        "matched_rules": [
+          "Brand Name in Non-Official Domain",
+          "Suspicious Top-Level Domain (.xyz)"
+        ],
+        "test_status": "PASSED"
+      }
+    }
+  ]
+}

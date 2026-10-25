@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "Fictional cyber fraud samples, benign reference messages, and edge cases for testing and demonstration in SURAKSHA AI.",
+  "safety_notice": "All phone numbers, personal names, account identifiers, URLs, and organizations in this file are completely fictional synthetic data. Do not use real personal data or live malicious links.",
+  "categories": [
+    {
+      "id": "job_scam",
+      "name": "Recruitment & Job Offer Scams",
+      "description": "Advance-fee recruitment fraud promising high compensation for minimal effort or remote data entry, conditioned on upfront registration fees."
+    },
+    {
+      "id": "bank_impersonation",
+      "name": "Banking & Security Impersonation",
+      "description": "Fraudulent messages falsely claiming account suspension, KYC expiration, or unauthorized access to harvest OTPs, PINs, or credentials."
+    },
+    {
+      "id": "upi_payment_trap",
+      "name": "UPI & Payment Scams",
+      "description": "Deceptive collect requests, QR code scanning tricks, or fake refund procedures designed to debit money rather than credit it."
+    },
+    {
+      "id": "loan_fraud",
+      "name": "Predatory / Instant Loan Offers",
+      "description": "Unsolicited zero-document loan approvals that demand advance processing, file, or insurance deposits."
+    },
+    {
+      "id": "prize_lottery",
+      "name": "Lucky Draw / Prize Scams",
+      "description": "Bogus lottery winnings requiring upfront tax clearance deposits to private UPI handles."
+    },
+    {
+      "id": "legitimate_benign",
+      "name": "Legitimate / Non-Fraudulent Messages",
+      "description": "Standard transactional and informational notifications that should evaluate as low risk (false-positive testing)."
+    },
+    {
+      "id": "ambiguous_inconclusive",
+      "name": "Ambiguous & Incomplete Inputs",
+      "description": "Short or unstructured text lacking sufficient context for conclusive risk determination."
+    }
+  ],
+  "samples": [
+    {
+      "id": "SAMPLE-JOB-001",
+      "category": "job_scam",
+      "title": "Work From Home Data Entry with Advance Fee",
+      "fictional_text": "Congratulations! You have been selected for a Work From Home data entry job. Salary Rs.35,000/month. Pay Rs.1,500 registration fee to confirm your slot within 2 hours. Contact HR Priya: 9XXXXXXXXX",
+      "indicators": [
+        "Unsolicited job offer without application or interview",
+        "Demand for advance registration deposit",
+        "Artificial deadline (within 2 hours)",
+        "Unverified mobile contact instead of official corporate portal"
+      ],
+      "recommended_action": "Never pay upfront fees for employment. Verify openings through official corporate career portals or verified LinkedIn company pages."
+    },
+    {
+      "id": "SAMPLE-BANK-002",
+      "category": "bank_impersonation",
+      "title": "Urgent Bank Account KYC Suspension Alert",
+      "fictional_text": "Your SBI bank account has been suspended. Update KYC now at http://sbi-kyc-update.xyz/verify or share your OTP with customer care within 24 hours.",
+      "indicators": [
+        "Alarmist threat of immediate account suspension",
+        "Non-official suspicious domain (.xyz TLD)",
+        "Demand to share one-time password (OTP)",
+        "24-hour urgency pressure"
+      ],
+      "recommended_action": "Banks never request OTPs or passwords over SMS or phone. Call the official helpline printed on the back of your bank debit card."
+    },
+    {
+      "id": "SAMPLE-UPI-003",
+      "category": "upi_payment_trap",
+      "title": "UPI Account Reactivation Payment Trick",
+      "fictional_text": "Dear customer, your UPI account has been suspended. Send Rs.1 to verify: upi://pay?pa=verify-upi@fakebank to reactivate within 2 hours or your account will be permanently blocked. — FakeBank Team",
+      "indicators": [
+        "Instruction to 'send money' in order to verify an account",
+        "Suspension threat",
+        "Deep link directing to an unauthorized UPI payment handle"
+      ],
+      "recommended_action": "Entering your UPI PIN always debits money from your account; you never need to send money or enter a PIN to receive funds or verify your handle."
+    },
+    {
+      "id": "SAMPLE-LOAN-004",
+      "category": "loan_fraud",
+      "title": "Instant Pre-Approved Loan with Advance Processing Fee",
+      "fictional_text": "Pre-approved personal loan of Rs.5,00,000 at 0% interest. No documents needed. Pay Rs.2,000 processing fee now to release your loan to prizeclaim@upi. Offer expires in 24 hours!",
+      "indicators": [
+        "Unrealistic 0% interest with zero document verification",
+        "Advance processing charge prior to loan disbursement",
+        "Payment routed to a personal/informal UPI VPA (@upi)",
+        "Time pressure constraint"
+      ],
+      "recommended_action": "Legitimate RBI-registered lenders deduct processing fees directly from the disbursed principal, never demanding upfront UPI transfers."
+    },
+    {
+      "id": "SAMPLE-PRIZE-005",
+      "category": "prize_lottery",
+      "title": "Lucky Draw Lottery Prize with Advance Tax Demand",
+      "fictional_text": "You have won Rs.50,000 in the Lucky Draw! To claim your prize, pay Rs.500 tax clearance fee to prizeclaim@upi within 2 hours.",
+      "indicators": [
+        "Unsolicited prize claim from a contest never entered",
+        "Upfront tax clearance deposit requirement",
+        "Routing to private UPI handle",
+        "Urgency hook"
+      ],
+      "recommended_action": "Genuine lotteries or contests do not demand advance money transfers to claim prizes. Block the sender immediately."
+    },
+    {
+      "id": "SAMPLE-LEGIT-006",
+      "category": "legitimate_benign",
+      "title": "E-Commerce Package Delivery Notice",
+      "fictional_text": "Your package with tracking order #402-182910 has been delivered to your doorstep. Thank you for shopping with us!",
+      "indicators": [
+        "No threat of penalty or account blockage",
+        "No request for payment, OTP, PIN, or confidential data",
+        "Standard informational fulfillment message"
+      ],
+      "recommended_action": "Standard benign notification. No defensive intervention required."
+    },
+    {
+      "id": "SAMPLE-AMBIG-007",
+      "category": "ambiguous_inconclusive",
+      "title": "Short Ambiguous Callback Request",
+      "fictional_text": "Hi, please call me back regarding our discussion yesterday.",
+      "indicators": [
+        "Brief conversational text",
+        "No explicit credential extraction, fees, or urgency triggers",
+        "Insufficient structural context to determine malicious intent"
+      ],
+      "recommended_action": "Verify sender identity before returning calls to unknown numbers. Do not share confidential financial information."
+    }
+  ]
+}
