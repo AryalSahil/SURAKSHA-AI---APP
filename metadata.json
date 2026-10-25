@@ -1,0 +1,6 @@
+{
+  "name": "Suraksha AI",
+  "description": "Mobile-first digital safety and fraud detection application. Think Before You Click. Check Before You Pay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

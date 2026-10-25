@@ -1,0 +1,217 @@
+---
+name: Suraksha AI
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#43474f'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#737780'
+  outline-variant: '#c3c6d1'
+  surface-tint: '#3c5f96'
+  primary: '#002550'
+  on-primary: '#ffffff'
+  primary-container: '#123b70'
+  on-primary-container: '#85a7e2'
+  inverse-primary: '#a9c7ff'
+  secondary: '#0051d5'
+  on-secondary: '#ffffff'
+  secondary-container: '#316bf3'
+  on-secondary-container: '#fefcff'
+  tertiary: '#002d0e'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#00461a'
+  on-tertiary-container: '#3cbd60'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#d6e3ff'
+  primary-fixed-dim: '#a9c7ff'
+  on-primary-fixed: '#001b3e'
+  on-primary-fixed-variant: '#21477c'
+  secondary-fixed: '#dbe1ff'
+  secondary-fixed-dim: '#b4c5ff'
+  on-secondary-fixed: '#00174b'
+  on-secondary-fixed-variant: '#003ea8'
+  tertiary-fixed: '#7ffc97'
+  tertiary-fixed-dim: '#62df7d'
+  on-tertiary-fixed: '#002109'
+  on-tertiary-fixed-variant: '#005320'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-sm: 0.75rem
+  margin: 1rem
+  margin-lg: 1.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system establishes an authoritative, highly accessible, and calm environment designed to de-escalate anxiety for citizens facing financial fraud and digital threats. Combining the precision of modern fintech with the clarity of civic-first utilities, the aesthetic balances high-stakes vigilance with effortless usability.
+
+The interface adheres to a refined **Modern Civic-Fintech** aesthetic:
+- **Atmosphere:** Stable, protective, and decisively transparent. No playful gimmicks or extraneous decorative flourishes; visual confidence is achieved through disciplined rhythm and explicit status indicators.
+- **Visual Weight:** Solid, crystalline surfaces over a cool, soothing canvas. Critical warnings command immediate recognition through strict semantic signaling rather than abrasive clutter.
+- **Interactivity:** Tactile clarity with large, deliberate tap targets designed to accommodate citizens under acute psychological distress or users with low digital literacy.
+
+## Colors
+
+The palette employs a multi-tiered hierarchy to differentiate everyday system navigation from urgent safety intelligence.
+
+- **Primary (`#123B70` - Deep Navy):** Anchors core structure, top navigation surfaces, primary headings, and baseline visual weight. It communicates structural legitimacy and institutional security.
+- **Secondary (`#2563EB` - Action Blue):** Highlights interactive pathways, affirmative progress states, and system-level actions (e.g., initiating automated link and SMS scans).
+- **Surface & Backgrounds:** The base app background uses `#F5F8FC` (Cool Canvas), creating subtle separation for elevated pure white (`#FFFFFF`) card surfaces without requiring harsh borders.
+- **Semantic State Architecture:**
+  - **Safe / Verified (`#16A34A` - Safe Green):** Validated legitimate communications, low-risk scores, and protected status badges.
+  - **Caution / Under Review (`#D97706` - Alert Amber):** Unverified senders, suspicious syntax flags, and conditional alerts.
+  - **Severe Danger / Incident (`#DC2626` - Alert Red):** Active fraud threats, malicious payment vectors, immediate blocking prompts, and emergency citizen reporting workflows.
+  - **System Grayscale:** Slate scales (`#0F172A` text primary, `#475569` secondary body, `#E2E8F0` hairline dividers) prevent optical harshness while strictly meeting WCAG AAA legibility.
+
+## Typography
+
+Typography prioritizes extreme scanability under stress. **Plus Jakarta Sans** provides rounded yet structured geometry for headers, numerical threat scores, and status titles, lending a friendly civic presence without compromising authority. **Inter** handles high-density body prose, legal disclaimers, and incident logs with neutral, highly legible micro-details.
+
+- Numerical figures (e.g., threat scores, scam percentage indicators, loss figures) use tabular lining figures natively to prevent horizontal jitter during real-time network scanning.
+- Dynamic mobile scaling ensures body sizes never fall below 14px for user-submitted message analysis or system-generated defense steps.
+
+## Layout & Spacing
+
+The layout is built for native Android single-hand ergonomic navigation using a fluid 4-column layout on standard viewports (360dp–412dp) transitioning to an 8-column layout on foldables and tablets.
+
+- **Vertical Cadence:** Strict 8dp baseline grid with 4dp micro-increments.
+- **Hardware Integration:**
+  - **Status Bar:** Edge-to-edge transparent layout with dark iconography on `#F5F8FC` canvas or inverted light icons when paired with deep navy hero surfaces.
+  - **Top App Bar:** 64dp standard height housing regional language toggles, profile access, and citizen SOS actions.
+  - **Bottom Navigation:** 80dp container height incorporating safe insets for gesture pill navigation.
+- **Ergonomic Safe Zones:** Primary scan triggers and file/screenshot upload targets occupy the lower two-thirds of the viewport ("Thumb Zone") to support rapid single-hand reporting.
+
+## Elevation & Depth
+
+Visual hierarchy avoids heavy, dark drop shadows. Instead, it relies on soft, daylight ambient diffusion and hairline structural tinting to maintain an uncluttered medical/security feel.
+
+- **Base Canvas (Level 0):** `#F5F8FC`. Flat, matte base layer.
+- **Surface Cards (Level 1):** `#FFFFFF` paired with an ultra-soft dual shadow:
+  - `0px 1px 3px rgba(18, 59, 112, 0.04), 0px 4px 16px rgba(18, 59, 112, 0.06)`
+  - Enclosed with a 1px border of `rgba(226, 232, 240, 0.8)` for crisp containment on diverse display panels.
+- **Active Modals & Critical Incident Sheets (Level 2):** Bottom drawers and scam alert popups utilize:
+  - `0px -4px 24px rgba(15, 23, 42, 0.12)`
+  - Backdrop dimming: `rgba(15, 23, 42, 0.48)` blur filter (4px) to emphasize the urgency of required user intervention.
+- **Safety Indicators:** Elevated threat badges do not cast colored shadows; they utilize high-contrast 10% tinted flood backgrounds with solid 100% semantic text and stroke to avoid color bleeding.
+
+## Shapes
+
+The interface balances welcoming accessibility with protective geometry. 
+
+- **Primary Cards and Containers:** Utilize `rounded-2xl` (16px / 1rem radius) to deliver a modern, non-threatening card structure.
+- **Buttons and Input Surfaces:** Standardized at 12px (`rounded-lg`) corner radii for crisp finger-target recognition.
+- **Pills and Badges:** Fully circular (`rounded-full` / 9999px) for threat status indicators, verified citizen seals, and category tags.
+- **Emergency Actions:** The dedicated SOS and Report Fraud bottom persistent targets feature full 16px curvature to integrate with the card aesthetic while retaining distinct elevation.
+
+## Components
+
+### Buttons
+- **Primary Action (Scan / Verify / Secure):** `#2563EB` solid fill, white text, 48dp minimum height (56dp for primary hero actions), 12px radius. Active state scales to 0.98 with an overlay of 10% black.
+- **Critical Danger Action (Report Scam / Block Sender):** `#DC2626` background, white label, full-width with a prominent warning shield icon.
+- **Secondary / Ghost:** Transparent background, 1.5px border `#CBD5E1`, text `#123B70`.
+
+### Chips & Threat Tags
+- Formed with a 9999px pill radius, 32dp height, containing an inline SVG icon (Shield, Warning Triangle, Checkmark).
+- **Safe:** `#DCFCE7` background, `#16A34A` text and icon.
+- **Suspicious:** `#FEF3C7` background, `#B45309` text and icon.
+- **High Risk:** `#FEE2E2` background, `#DC2626` text and icon.
+
+### Cards & Threat Scanners
+- **Scam Diagnostic Card:** `#FFFFFF` background, 16px border radius, 16px interior padding. Features a split layout: left column contains the threat score gauge (0-100), right column displays semantic risk classification and instant remediation steps.
+- **Evidence Drop Card:** Dashed 1.5px border (`#93C5FD`), `#F8FAFC` background, dedicated 48dp action target to paste suspicious text, SMS, or upload banking screenshots.
+
+### Input Fields
+- Minimum height 56dp. Border is 1.5px `#E2E8F0`, shifting to 2px `#2563EB` on focus.
+- Labels utilize `label-md` seated outside the field container for uncompromised accessibility.
+- Integrated trailing icon buttons allow single-tap clipboard pasting for immediate SMS/URL validation.
+
+### Checkboxes & Radio Controls
+- Minimum hit target of 48×48dp enclosing a 20×20dp box with 4px corner rounding.
+- Checked state fills with `#2563EB` displaying an unambiguous white check vector.
+
+### Top App Bar & Bottom Navigation
+- **Top Bar:** 64dp height, surface color `#F5F8FC` blending seamlessly into canvas, displaying Suraksha AI emblem, live offline protection status dot, and user profile avatar.
+- **Bottom Navigation Bar:** 80dp container height, solid `#FFFFFF` surface with a subtle 1px top border (`#E2E8F0`). Consists of 4 primary destinations: **Scan**, **Threat Feed**, **Vault**, and **Get Help (SOS)**. Icons are 24dp with active items displayed in `#2563EB` with bold font weight and subtle dot indicators beneath.
